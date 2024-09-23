@@ -22,3 +22,19 @@ print('Задача 6. Стипендия')
 # 10. месяц траты 15657.2 не хватает 37566.55
 
 # Нужно попросить у родителей 37566.55 рублей
+
+educational_grant = int(input("Введите стипендию: "))
+expenses = int(input("Введите расходы на проживание: "))
+
+total_needed = 0
+total_months = 10
+percent = 1.03
+
+for month in range(1, total_months + 1):
+    if month == 1:
+        current_expenses = expenses
+    else:
+        current_expenses *= percent
+    total_needed += current_expenses - educational_grant
+    print(f"{month}. месяц траты {current_expenses:.2f} не хватает {total_needed:.2f}")
+print(f"Нужно попросить у родителей {total_needed:.2f} рублей")

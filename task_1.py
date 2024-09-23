@@ -4,3 +4,8 @@ print('Задача 1. Космическая еда')
 
 # Чтобы прикинуть гречневый бюджет, вы решили написать программу, которая выведет информацию о том, сколько килограммов гречки у вас должно быть в запасе через месяц, два и так далее, пока она не закончится. Используйте цикл for.
 
+total_grechka = 100
+consumption_per_month = 4
+for month, remaining_grechka in enumerate(range(total_grechka - consumption_per_month, -1, -consumption_per_month), start=1):
+    print(f"Месяц {month}: осталось {remaining_grechka} кг гречки")
+
